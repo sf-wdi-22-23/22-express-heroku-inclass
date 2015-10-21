@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Express - Heroku Starter Project</title>
+  <title>
+  Fierce Castle</title>
   <meta charset="utf-8" />
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,23 +13,28 @@
   <!-- Bootstrap JS -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <!-- Custom -->
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
-  <script src="/js/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+  <script src="/static/js/app.js"></script>
 </head>
 <body>
 
   <div id="page-wrapper" class="container">
     <header class="page-header">
-      <h1>This is the Title</h1>
+      <h1>Fierce Castle</h1>
     </header>
     
     <!-- This is the bs3-form boilerplate: -->
-    <form action="" method="POST" role="form">
-      <legend>Form title</legend>
+    <form id="signupForm" action="/users" method="POST" role="form">
+
+      <legend>Createst Thou Thy User</legend>
     
       <div class="form-group">
-        <label for="">label</label>
-        <input type="text" class="form-control" id="" placeholder="Input field">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="" name="username" placeholder="Who Goes There?">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="" name="password" placeholder="What is thy password?">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="" name="email" placeholder="Where to send carrier pigeons?">
       </div>
     
       <button type="submit" class="btn btn-primary">Submit</button>

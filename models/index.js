@@ -1,5 +1,9 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/my_heroku_app");
+var User = require("./user");
+
+mongoose.connect( process.env.MONGOLAB_URI ||
+                  process.env.MONGOHQ_URL || 
+                  "mongodb://localhost/calendar_countdown" );
 
 // After creating a new model, require and export it:
-// module.exports.Tweet = require("./tweet.js");
+module.exports.User = User;
