@@ -24,20 +24,20 @@
     </header>
     
     <!-- This is the bs3-form boilerplate: -->
-    <form id="signupForm" action="/users" method="POST" role="form">
+    <form id="signupForm" role="form">
 
       <legend>Createst Thou Thy User</legend>
     
       <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" id="" name="username" placeholder="Who Goes There?">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="" name="password" placeholder="What is thy password?">
+        <!-- <label for="username">Username</label>
+        <input type="text" class="form-control" id="" name="username" placeholder="Who Goes There?"> -->
         <label for="email">Email</label>
         <input type="email" class="form-control" id="" name="email" placeholder="Where to send carrier pigeons?">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="" name="password" placeholder="What is thy password?">
       </div>
     
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
     </form>
 
   </div>

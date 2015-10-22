@@ -23,21 +23,25 @@ app.get('/', function(request, response) {
 
 // create a new user:
 app.post('/users', function(req,res){
-	// console.log(req.body);
-	// get the form info
-	// encrypt the password
-	// make a new user in the db
-	db.User.create({email: req.body.email, username: req.body.username, password:req.body.password}, function(err, userData){
-		if(err){
-		console.log('There was an error creating the user: ' + err);
-		} else{
-			res.json(userData);
-		}
-	    }
-	);
 
-	// send a response (maybe JSON)
-	// res.send("You're in!");
+	db.User.findOne({email: req.body.email}, function(err, user){
+		// console.log(user, " line 28");
+		// return user;
+
+		if(user == null){
+			db.User.createSecure(req.body.password,  req.body.email, function(err, userData){
+				if(err){
+					console.log('There was an error creating the user: ' + err);
+				} else{
+					res.json(userData);
+				}
+			    }
+			);
+		} else {
+			console.log("user exists");
+		}
+
+	});
 });
 
 app.listen(process.env.PORT || 5000);
