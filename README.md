@@ -15,5 +15,5 @@ A few steps not included in the starter project README include:
 2. `npm install bcryptjs --save`
 3. For local development, fire up `mongod` before running `nodemon`
 
-I'm sure there were others. Feel free to Slack me with reminders and I will update the README.md
+I'm sure there were others. Feel free to file an issue or just Slack me with reminders and I will update the README.md
 
